@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multimedia and embedding examples: Audio and video</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <h1>Active learning: Embedding your own audio and video</h1>
+
+    <audio controls>
+      <source src="assets/viper.mp3" type="audio/mp3" />
+      <source src="assets/viper.mp3" type="audio/ogg" />
+      <p>
+        Your browser doesn't support this audio file. Here is a
+        <a href="assets/viper.mp3" target="_blank">link to the audio</a>
+        instead
+      </p>
+    </audio>
+
+    <video
+      controls
+      poster="assets/poster.png"
+      preload="metadata"
+      width="400"
+      height="400"
+    >
+      <source src="assets/rabbit320.mp4" type="video/mp4" />
+      <source src="assets/rabbit320.webm" type="video/webm" />
+
+      <track
+        label="English"
+        kind="subtitles"
+        srclang="en"
+        src="subtitles/rabbit320-en.vtt"
+        default
+      />
+      <track
+        label="Portuguese"
+        kind="subtitles"
+        srclang="pt"
+        src="subtitles/rabbit320-pt.vtt"
+      />
+      <p>
+        Your browser doesn't support this video file. Here is a
+        <a href="assets/rabbit320.mp4" target="_blank">link to the video</a>
+        instead.
+      </p>
+    </video>
+  </body>
+</html>
