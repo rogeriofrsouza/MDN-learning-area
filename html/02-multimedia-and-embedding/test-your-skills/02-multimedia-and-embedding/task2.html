@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Media/embedding: Task 2</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <h1>Video embed</h1>
+
+    <video controls width="320" height="240" muted>
+      <source src="media/video.mp4" type="video/mp4" />
+      <source src="media/video.webm" type="video/webm" />
+
+      <track
+        label="English"
+        kind="subtitles"
+        srclang="en"
+        src="media/subtitles-en.vtt"
+      />
+
+      <p>
+        Your browser doesn't support this video file. Here is a
+        <a href="">link to the video</a>
+        instead.
+      </p>
+    </video>
+  </body>
+</html>
