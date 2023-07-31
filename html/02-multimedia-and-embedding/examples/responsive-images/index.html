@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Active learning: Implementing your own responsive images</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Webpage for responsive images</h1>
+    </header>
+
+    <main>
+      <article>
+        <section>
+          <h2>Spent some time with nature</h2>
+
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget
+            venenatis ligula. Ut lacinia at dolor vitae pulvinar. Aliquam
+            pretium dignissim eros. Integer faucibus, dui non aliquet bibendum,
+            lectus orci lobortis odio, ornare porttitor est tellus eget velit.
+            Nulla eros elit, malesuada id neque vel, viverra vehicula neque.
+            Nullam auctor turpis non leo iaculis finibus. Quisque blandit arcu
+            venenatis libero tempor, ac pulvinar ligula dapibus.
+          </p>
+
+          <!-- Art direction -->
+          <picture>
+            <source media="(max-width: 799px)" srcset="assets/fox-400w.jpg" />
+            <source media="(max-width: 1199px)" srcset="assets/fox-800w.jpg" />
+            <source media="(min-width: 1200px)" srcset="assets/fox-1200w.jpg" />
+            <img
+              src="assets/fox-800w.jpg"
+              alt="Fox standing on brown soil with rocks during daytime"
+            />
+          </picture>
+
+          <blockquote
+            cite="https://unsplash.com/es/@kate_b?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+          >
+            Photo by
+            <a
+              href="https://unsplash.com/es/@kate_b?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+            >
+              Katerina Bartosova
+            </a>
+            on
+            <a
+              href="https://unsplash.com/photos/SAfJ1eTBeyk?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+            >
+              Unsplash
+            </a>
+          </blockquote>
+        </section>
+
+        <section>
+          <h2>Reading sessions in the library</h2>
+
+          <p>
+            Suspendisse potenti. Ut in luctus eros. Mauris pulvinar vehicula
+            aliquet. Etiam imperdiet eleifend luctus. Duis ut justo nec eros
+            ornare consectetur. Vestibulum convallis condimentum varius.
+            Maecenas rutrum porta varius. Phasellus volutpat sem id sagittis
+            luctus. Morbi vitae quam vitae nisi iaculis dignissim.
+          </p>
+
+          <!-- Resolution switching: Different sizes -->
+          <img
+            srcset="
+              assets/library-400w.jpg   400w,
+              assets/library-800w.jpg   800w,
+              assets/library-1200w.jpg 1200w
+            "
+            sizes="(max-width: 600px) 400px, (max-width: 1000px) 800px, 1200px"
+            src="assets/library-800w.jpg"
+            alt="Books on shelves in library"
+          />
+
+          <blockquote
+            cite="https://unsplash.com/es/@kate_b?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+          >
+            Photo by
+            <a
+              href="https://unsplash.com/@trnavskauni?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+            >
+              Trnava University
+            </a>
+            on
+            <a
+              href="https://unsplash.com/photos/sd8uJsf4XM4?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+            >
+              Unsplash
+            </a>
+          </blockquote>
+        </section>
+
+        <section>
+          <h2>Some music practice</h2>
+
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci
+            culpa at molestiae inventore velit alias fuga, quibusdam tempora,
+            similique sunt aperiam optio. Iste ducimus hic nam magni animi saepe
+            molestiae.
+          </p>
+
+          <!-- Resolution switching: Same size, different resolutions -->
+          <img
+            srcset="
+              assets/piano-320w.jpg,
+              assets/piano-480w.jpg 1.5x,
+              assets/piano-640w.jpg 2x
+            "
+            src="assets/piano-640w.jpg"
+            alt="Music note on brown piano photo"
+          />
+
+          <blockquote>
+            Photo by
+            <a
+              href="https://unsplash.com/@lorenzospoleti?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+            >
+              Lorenzo Spoleti
+            </a>
+            on
+            <a
+              href="https://unsplash.com/photos/MlhJNEUQpBs?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+            >
+              Unsplash
+            </a>
+          </blockquote>
+        </section>
+      </article>
+    </main>
+  </body>
+</html>
