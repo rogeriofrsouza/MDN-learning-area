@@ -1,0 +1,63 @@
+body {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1em;
+  font-family: "Open Sans", sans-serif;
+  color: #333;
+  background-color: #fff;
+}
+
+h1,
+h2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  color: #3f87a6;
+}
+
+h1 {
+  font-size: 2em;
+  border-bottom: 4mm ridge #f69d3c;
+}
+
+h2 {
+  font-size: 1.5em;
+  font-style: italic;
+}
+
+.job-title {
+  color: #999;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.under {
+  text-decoration: wavy underline #999;
+}
+
+.underover {
+  text-decoration: dashed underline overline;
+}
+
+.line {
+  text-decoration: line-through;
+}
+
+.thick {
+  text-decoration: solid underline #999 4px;
+}
+
+ul {
+  background-color: #fafafa;
+  border: 5px solid #f69d3c;
+  padding: 32px 16px 16px;
+}
+
+a:link,
+a:visited {
+  color: #3f87a6;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #999;
+}
