@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Backgrounds and Borders: Task 2</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+      .box {
+        width: 300px;
+        padding: 0.5em;
+
+        border: 5px solid lightblue;
+        border-top-left-radius: 20px;
+        border-bottom-right-radius: 40px;
+      }
+
+      h2 {
+        background-image: url(star.png), url(star.png);
+        background-repeat: no-repeat, repeat-y;
+        background-position: left, right;
+        background-attachment: scroll;
+        text-align: center;
+        padding-left: 40px;
+        padding-right: 40px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="box">
+      <h2>Backgrounds &amp; Borders</h2>
+    </div>
+  </body>
+</html>
