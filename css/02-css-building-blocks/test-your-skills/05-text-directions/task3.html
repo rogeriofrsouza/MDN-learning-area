@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Writing Modes Task 3: Logical Margin, Border, Padding</title>
+    <link rel="stylesheet" href="../styles.css" />
+
+    <style>
+      .box {
+        width: 150px;
+        height: 150px;
+        display: inline-block;
+      }
+
+      .physical {
+        border-top: 5px solid rebeccapurple;
+        border-right: 5px solid grey;
+        border-bottom: 5px dotted red;
+        border-left: 5px dotted blue;
+
+        padding-top: 40px;
+        margin-bottom: 30px;
+      }
+
+      .logical {
+        border-block-start: 5px solid rebeccapurple;
+        border-inline-end: 5px solid grey;
+        border-block-end: 5px dotted red;
+        border-inline-start: 5px dotted blue;
+
+        padding-block-start: 40px;
+        margin-block-end: 30px;
+      }
+
+      .vertical {
+        writing-mode: vertical-rl;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h2>Physical Properties</h2>
+    <div class="box physical">Horizontal.</div>
+    <div class="box physical vertical">Vertical.</div>
+
+    <h2>Logical Properties</h2>
+    <div class="box logical">Horizontal.</div>
+    <div class="box logical vertical">Vertical.</div>
+  </body>
+</html>
