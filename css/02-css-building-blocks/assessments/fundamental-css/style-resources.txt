@@ -1,0 +1,12 @@
+
+    The default margin applied to the <h2> and <p> elements by the browser will 
+    interfere with our design, so write a rule that targets all these elements 
+    and sets their margin to 0.
+
+    To stop the image from spilling out of the main business card content (the <article> element), we need to give it a specific height. Set the <article>'s height to 120px, but expressed in ems. Also give it a background color of semi-transparent black, resulting in a slightly darker shade that lets the background red color shine through a bit too.
+
+    Write a ruleset that gives the <h2> an effective font size of 20px (but expressed in ems) and an appropriate line height to place it in the center of the header's content box. Recall from earlier that the content box height should be 30px — this gives you all the numbers you need to calculate the line height.
+
+    Write a ruleset that gives the <p> inside the footer an effective font size of 15px (but expressed in ems) and an appropriate line height to place it in the center of the footer's content box. Recall from earlier that the content box height should be 30px — this gives you all the numbers you need to calculate the line height.
+
+    As a last little touch, give the paragraph inside the <article> an appropriate padding value so that its left edge lines up with the <h2> and footer paragraph, and set its color to be fairly light so it is easy to read.
