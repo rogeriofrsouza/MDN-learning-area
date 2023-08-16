@@ -1,0 +1,32 @@
+html {
+  font-family: serif;
+}
+
+/* Your CSS below here */
+
+body {
+  margin: 0;
+  background-color: #fafafa;
+}
+
+div {
+  width: 320px;
+  height: 320px;
+  margin: 40px auto;
+  padding: 2rem;
+
+  box-sizing: border-box;
+  text-align: center;
+  line-height: 16rem;
+  font-size: 1.25rem; /* 20px/16px (default rem value) */
+
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2) 30%);
+  background-color: hsl(0, 60%, 50%);
+  color: white;
+  text-shadow: 2px 2px 4px black;
+  border-radius: 0.5rem;
+  border: 3px solid hsl(0, 60%, 30%);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.7),
+    inset 4px 4px 8px rgba(255, 255, 255, 0.7),
+    inset -4px -4px 8px rgba(0, 0, 0, 0.7);
+}
