@@ -1,0 +1,50 @@
+@font-face {
+  font-family: "antic_didone";
+  src: url("fonts/anticdidone-regular-webfont.woff2") format("woff2"),
+    url("fonts/anticdidone-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "arsenal";
+  src: url("fonts/arsenal-regular-webfont.woff2") format("woff2"),
+    url("fonts/arsenal-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* General setup */
+
+html {
+  font-size: 14px;
+  margin: 0;
+  font-family: "arsenal", sans-serif;
+}
+
+body {
+  width: 80%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h1,
+h2 {
+  font-family: "antic_didone", serif;
+}
+
+/* Typography */
+
+h1 {
+  font-size: 3.2rem;
+}
+
+h2 {
+  font-size: 2.4rem;
+}
+
+p {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  word-spacing: 0.6rem;
+}
