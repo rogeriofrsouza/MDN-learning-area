@@ -1,0 +1,154 @@
+/* General styles */
+
+:root {
+  --main-color: hsl(198, 71%, 30%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font: 1.2em/1.4 Arial, Helvetica, sans-serif;
+  color: #333;
+}
+
+body {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+.title {
+  font-family: "Times New Roman", Times, serif;
+}
+
+/* Header */
+
+header {
+  background-color: var(--main-color);
+  color: #fff;
+  /* border: 5px solid #000; */
+}
+
+header .title {
+  font-size: 150%;
+  font-style: italic;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+}
+
+header a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding: 0.5em 1em;
+  border-top: 1px solid #fff;
+}
+
+/* Main */
+
+main {
+  padding: 0.5em 1em;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  column-gap: 1em;
+  margin-top: 40px;
+}
+
+.cards li {
+  /* border: 5px solid #000; */
+  margin-bottom: 1em;
+  border-radius: 0.5em;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+.cards h3 {
+  background-color: var(--main-color);
+  color: #fff;
+  margin: 0;
+  padding: 0.5rem 1rem;
+}
+
+.cards .inner {
+  padding: 0.5em 1em;
+}
+
+.sidebar {
+  background-color: var(--main-color);
+  padding: 0.5em 1em;
+  color: #fff;
+}
+
+/* Footer */
+
+footer {
+  margin-top: 2em;
+  padding: 0.5rem 1rem;
+  background-color: var(--main-color);
+  color: #fff;
+  /* border: 5px solid #000; */
+}
+
+/* Media queries */
+
+@media screen and (min-width: 40em) {
+  header .title {
+    padding: 1rem;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    column-gap: 1em;
+    padding: 1.5em 1em;
+  }
+
+  h1 {
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 60em) {
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  header a:focus,
+  header a:hover {
+    background-color: hsl(198, 71%, 20%);
+  }
+
+  nav ul {
+    display: flex;
+  }
+
+  nav a {
+    border-top: unset;
+  }
+
+  .cards li {
+    cursor: pointer;
+    transition: 0.3s all;
+  }
+
+  .cards li:hover {
+    transform: translate(0, -0.5em);
+  }
+
+  .cards li:hover .inner {
+    background-color: #fafafa;
+  }
+}
