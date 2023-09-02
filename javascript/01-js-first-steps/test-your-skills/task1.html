@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Variables: Task 1</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <section class="preview"></section>
+
+    <script>
+      // Add your code here
+
+      let myName;
+      myName = prompt("What's your name?");
+      let myAge = prompt("Tell me your age");
+
+      // Don't edit the code below here!
+
+      const section = document.querySelector('.preview');
+      const para1 = document.createElement('p');
+      para1.textContent = myName;
+      const para2 = document.createElement('p');
+      para2.textContent = myAge;
+      section.appendChild(para1);
+      section.appendChild(para2);
+    </script>
+  </body>
+</html>
