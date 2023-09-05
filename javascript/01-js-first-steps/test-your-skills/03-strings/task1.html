@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Strings: Task 1</title>
+    <link rel="stylesheet" href="../01-variables/style.css"/>
+  </head>
+
+  <body>
+    <section class="preview"></section>
+
+    <script>
+      // Add your code here
+
+      const quoteStart = "Don't judge each day by the harvest you reap";
+      const quoteEnd = "but by the seeds that you plant."
+      const author = "Robert Louis Stevenson";
+      const finalQuote = `${quoteStart} ${quoteEnd} (${author})`;
+
+      // Don't edit the code below here!
+
+      const section = document.querySelector('section');
+      const para1 = document.createElement('p');
+      para1.textContent = finalQuote;
+      section.appendChild(para1);
+    </script>
+  </body>
+</html>
