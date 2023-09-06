@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Arrays: Task 1</title>
+    <link rel="stylesheet" href="../style.css"/>
+  </head>
+
+  <body>
+    <section class="preview"></section>
+
+    <script>
+      // Add your code here
+      
+      const myArray = ["The chief of the world", "Your hobbie", "Jurassic park", "Pirates of the Caribbean"];
+      myArray[0] = "The hobbit";
+      myArray[1] = "The godfather";
+      myArray.unshift("The lord of the rings");
+
+      // Don't edit the code below here!
+
+      const section = document.querySelector('section');
+      let para = document.createElement('p');
+      para.textContent = `Array: ${myArray.join(", ")}`;
+      section.appendChild(para);
+    </script>
+  </body>
+</html>

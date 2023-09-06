@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Arrays: Task 4</title>
+    <link rel="stylesheet" href="../style.css"/>
+  </head>
+
+  <body>
+    <section class="preview"></section>
+
+    <script>
+      const birds = ["Parrots", "Falcons", "Eagles", "Emus", "Caracaras", "Egrets"];
+
+      // Add your code here
+      
+      const index = birds.indexOf("Eagles");
+      if (index !== -1) {
+        birds.splice(index, 1);
+      }
+      const eBirds = birds.filter(x => x.startsWith("E"));
+
+      // Don't edit the code below here!
+
+      const section = document.querySelector('section');
+      const para = document.createElement('p');
+      para.textContent = eBirds;
+      section.appendChild(para);
+    </script>
+  </body>
+</html>
