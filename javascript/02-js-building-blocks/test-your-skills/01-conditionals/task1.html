@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Conditionals: Task 1</title>
+    <link rel="stylesheet" href="../style.css"/>
+  </head>
+
+  <body>
+    <section class="preview"></section>
+
+    <script>
+      let season = 'summer';
+      let response;
+
+      // Add your code here
+
+      switch (season) {
+        case 'summer':
+          response = 'It was June, and the world smelled of roses. The sunshine was like powdered gold over the grassy hillside. (Maud Hart Lovelace)';
+          break;
+        case 'winter':
+          response = 'I prefer winter and fall, when you feel the bone structure of the landscape — the loneliness of it; the dead feeling of winter. Something waits beneath it, the whole story doesn’t show. (Andrew Wyeth)';
+          break;
+        default:
+          response = 'We don\'t know what season it is';
+      }
+      
+      // Don't edit the code below here!
+
+      const section = document.querySelector('section');
+      let para = document.createElement('p');
+      para.textContent = response;
+      section.appendChild(para);
+    </script>
+  </body>
+</html>
