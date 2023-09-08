@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Loops: Task 3</title>
+    <link rel="stylesheet" href="../style.css"/>
+  </head>
+
+  <body>
+    <section class="preview"></section>
+
+    <script>
+      let i = 500;
+      const para = document.createElement('p');
+
+      function isPrime(num) {
+        for (let i = 2; i < num; i++) {
+          if (num % i === 0) {
+            return false;
+          }
+        }
+
+        return true;
+      }
+
+      // Add your code here
+      
+      para.textContent = "Prime numbers: ";
+
+      while (i >= 2) {
+        if (isPrime(i)) {
+          para.textContent += `${i}, `;
+        }
+        i--;
+      };
+
+      para.textContent = para.textContent.slice(0, -2) + ".";
+
+      // Don't edit the code below here!
+
+      const section = document.querySelector('section');
+      section.appendChild(para);
+    </script>
+  </body>
+</html>

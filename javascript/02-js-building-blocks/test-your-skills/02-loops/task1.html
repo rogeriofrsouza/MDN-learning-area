@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Loops: Task 1</title>
+    <link rel="stylesheet" href="../style.css"/>
+  </head>
+
+  <body>
+    <section class="preview"></section>
+
+    <script>
+      const myArray = ['tomatoes', 'chick peas', 'onions', 'rice', 'black beans'];
+      const list = document.createElement('ul');
+
+      // Add your code here
+
+      for (const item of myArray) {
+        const listItem = document.createElement('li');
+        listItem.textContent = capitalize(item);
+        list.appendChild(listItem);
+      }
+
+      function capitalize(str) {
+        str = str.toLowerCase();
+        const firstLetter = str.slice(0, 1);
+        return str.replace(firstLetter, firstLetter.toUpperCase());        
+      }
+
+      // Don't edit the code below here!
+
+      const section = document.querySelector('section');
+      section.appendChild(list);
+    </script>
+  </body>
+</html>
