@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Functions: Task 3</title>
+    <link rel="stylesheet" href="../style.css"/>
+  </head>
+
+  <body>
+    <section class="preview">
+      <button type="button">Choose a random name</button>
+    </section>
+
+    <script>
+      const names = ['Chris', 'Li Kang', 'Anne', 'Francesca', 'Mustafa', 'Tina', 'Bert', 'Jada'];
+      const para = document.createElement('p');
+      const btn = document.querySelector('button');
+
+      // Add your code here
+
+      function random(min, max) {
+        if (min > max) {
+          const aux = max;
+          max = min;
+          min = aux;
+        } else if (min === max) {
+          return min;
+        }
+        
+        let num;
+        do {
+          num = Math.floor(Math.random() * max);
+        } while (num < min);
+
+        return num;
+      }
+
+      function chooseName(names) {
+        const idx = random(2, names.length);
+        return names[idx];
+      }
+
+      btn.addEventListener('click', () => 
+        para.textContent = `Name: ${chooseName(names)}`);
+
+      // Don't edit the code below here!
+
+      const section = document.querySelector('section');
+      section.appendChild(para);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Functions: Task 2</title>
+    <style>
+      canvas {
+        border: 1px solid black;
+      }
+    </style>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+
+  <body>
+    <section class="preview">
+      <button type="button">Draw rectangle</button>
+    </section>
+
+    <canvas width="480" height="320"></canvas>
+
+    <script>
+      const canvas = document.querySelector('canvas');
+      const ctx = canvas.getContext('2d');
+      const btn = document.querySelector('button');
+
+      const x = 50;
+      const y = 60;
+      const width = 100;
+      const height = 75;
+      const colors = ['crimson', 'aqua', 'rebeccapurple', 'darkgray'];
+
+      // Add your code here
+
+      function randomColor() {
+        const idx = Math.floor(Math.random() * colors.length);
+        return colors[idx];
+      }
+
+      btn.addEventListener('click', () => {
+        ctx.clearRect(x, y, width, height);
+        ctx.beginPath();
+        ctx.fillStyle = randomColor();
+        ctx.fillRect(x, y, width, height);
+      });
+
+      // Don't edit the code below here!
+
+      const section = document.querySelector('section');
+    </script>
+  </body>
+</html>

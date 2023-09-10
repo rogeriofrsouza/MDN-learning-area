@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Functions: Task 1</title>
+    <link rel="stylesheet" href="../style.css"/>
+  </head>
+
+  <body>
+    <section class="preview">
+      <button type="button">Choose a random name</button>
+    </section>
+
+    <script>
+      const names = ['Chris', 'Li Kang', 'Anne', 'Francesca', 'Mustafa', 'Tina', 'Bert', 'Jada'];
+      const para = document.createElement('p');
+      const btn = document.querySelector('button');
+
+      // Add your code here
+
+      function chooseName() {
+        const random = Math.floor(Math.random() * names.length);
+        para.textContent = `Name: ${names[random]}`;
+      }
+
+      btn.addEventListener('click', chooseName);
+
+      // Don't edit the code below here!
+
+      const section = document.querySelector('section');
+      section.appendChild(para);
+    </script>
+  </body>
+</html>
