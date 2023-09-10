@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Function library example</title>
+    <style>
+      html {
+        font-family: sans-serif;
+        color: #333;
+      }
+
+      body {
+        padding: 1em;
+      }
+
+      input {
+        font-size: 1.1em;
+        padding: 8px 12px;
+        margin: 10px 1px ;
+      }
+
+      p {
+        white-space: pre;
+      }
+    </style>
+  </head>
+  <body>
+    <label for="number">Insert a number: </label>
+    <input id="number" class="number-input" type="text">
+    <p></p>
+
+    <script>
+      const input = document.querySelector('.number-input');
+      const para = document.querySelector('p');
+
+      function squared(num) {
+        return num * num;
+      }
+
+      function cubed(num) {
+        return num * num * num;
+      }
+
+      function factorial(num) {
+        if (num < 0) return undefined;
+        if (num === 0) return 1;
+
+        let x = num - 1;
+        while (x > 1) {
+          num *= x;
+          x--;
+        }
+        return num;
+      }
+
+      function sqRoot(num) {
+        return Math.sqrt(num).toFixed(2);
+      }
+
+      function cbRoot(num) {
+        return Math.cbrt(num).toFixed(2);
+      }
+
+      function circ(num) {
+        return (2 * Math.PI * num).toFixed(2);
+      }
+
+      function isPrime(num) {
+        for (let i = 2; i < num; i++) {
+          if (num % i === 0) {
+            return false;
+          }
+        }
+        return true;
+      }
+
+      function isEven(num) {
+        return num % 2 === 0;
+      }
+
+      input.addEventListener("change", () => {
+        const num = parseFloat(input.value);
+        if (isNaN(num)) {
+          para.textContent = "You need to enter a number!";
+        } else {
+          para.textContent = `${num} squared is ${squared(num)}\r\n`;
+          para.textContent += `${num} cubed is ${cubed(num)}\r\n`;
+          para.textContent += `${num} factorial is ${factorial(num)}\r\n`;
+          para.textContent += `The square root of ${num} is ${sqRoot(num)}\r\n`;
+          para.textContent += `The cube root of ${num} is ${cbRoot(num)}\r\n`;
+          para.textContent += `The circunference of a circle with radius ${num} is ${circ(num)}\r\n`;
+          para.textContent += isPrime(num) ? `${num} is prime\r\n` : `${num} is not prime\r\n`;
+          para.textContent += isEven(num) ? `${num} is even\r\n` : `${num} is odd\r\n`;
+        }
+      });
+    </script>
+  </body>
+</html>
