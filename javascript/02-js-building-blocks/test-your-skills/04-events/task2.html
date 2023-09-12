@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Events: Task 2</title>
+    <style>
+      canvas {
+        border: 1px solid black;
+      }
+    </style>
+    <link rel="stylesheet" href="../style.css"/>
+  </head>
+
+  <body>
+    <section class="preview"></section>
+
+    <canvas width="480" height="320" tabindex="0"></canvas>
+
+    <script>
+      const canvas = document.querySelector('canvas');
+      const ctx = canvas.getContext('2d');
+
+      function drawCircle(x, y, size) {
+        ctx.fillStyle = 'white';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        ctx.beginPath();
+        ctx.fillStyle = 'rebeccapurple';
+        ctx.arc(x, y, size, 0, 2 * Math.PI);
+        ctx.fill();
+      }
+
+      let x = 50;
+      let y = 50;
+      const size = 30;
+      const n = 20;
+
+      drawCircle(x, y, size);
+
+      // Add your code here
+
+      const section = document.querySelector('.preview');
+      const para = document.createElement('p');
+
+      canvas.addEventListener('keydown', (event) => {
+        switch (event.key.toLowerCase()) {
+          case 'w':
+            if (y > 0) {
+              y -= n;
+            }
+            break;
+          case 'a':
+            if (x > 0) {
+              x -= n;
+            }
+            break;
+          case 's':
+            if (y < canvas.height) {
+              y += n;
+            }
+            break;
+          case 'd':
+            if (x < canvas.width) {
+              x += n;
+            };
+            break;
+        }
+        
+        drawCircle(x, y, size);
+        para.textContent = `You pressed "${event.key}".`;
+        section.appendChild(para);
+      });
+    </script>
+  </body>
+</html>

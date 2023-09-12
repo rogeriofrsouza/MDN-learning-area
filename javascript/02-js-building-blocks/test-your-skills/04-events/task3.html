@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Events: Task 3</title>
+    <style>
+      button {
+        display: block;
+        margin: 20px 0 20px 20px;
+        width: 80px;
+        padding: 4px 8px;
+      }
+
+      .button-bar {
+        padding: 20px 0;
+      }
+    </style>
+    <link rel="stylesheet" href="../style.css"/>
+  </head>
+
+  <body>
+    <section class="preview"></section>
+
+    <div class="button-bar">
+      <button data-color="red">Red</button>
+      <button data-color="yellow">Yellow</button>
+      <button data-color="green">Green</button>
+      <button data-color="purple">Purple</button>
+      <button data-color="random">Random</button>
+    </div>
+
+    <script>
+      const buttonBar = document.querySelector('.button-bar');
+
+      function random(number) {
+        return Math.floor(Math.random() * number);
+      }
+
+      // Add your code here
+
+      const section = document.querySelector('.preview');
+      const para = document.createElement('p');
+
+      buttonBar.addEventListener('click', (e) => {
+        let color = e.target.getAttribute('data-color');
+        if (color === 'random') {
+          color = `rgb(${random(256)}, ${random(256)}, ${random(256)})`;
+        }
+        buttonBar.style.backgroundColor = color;
+
+        para.textContent = `You chose ${color}.`;
+        section.appendChild(para);
+      });
+    </script>
+  </body>
+</html>

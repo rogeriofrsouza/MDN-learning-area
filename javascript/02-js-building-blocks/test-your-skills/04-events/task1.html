@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Events: Task 1</title>
+    <style>
+      button {
+        display: block;
+        margin: 20px 0 20px 20px;
+        width: 80px;
+        padding: 4px 0;
+      }
+    </style>
+    <link rel="stylesheet" href="../style.css"/>
+  </head>
+
+  <body>
+    <section class="preview"></section>
+
+    <button>Click here</button>
+
+    <script>
+      const btn = document.querySelector('button');
+      const section = document.querySelector('.preview');
+
+      // Add your code here
+      btn.addEventListener('click', () => {
+        if (btn.textContent === 'OFF') {
+          section.textContent = 'Machine is on!\n';
+          btn.textContent = 'ON';
+          btn.style.backgroundColor = 'lightgreen';
+        } else {
+          section.textContent = 'Machine is off!\n';
+          btn.textContent = 'OFF';
+          btn.style.backgroundColor = 'crimson';
+        }
+      });
+    </script>
+  </body>
+</html>
