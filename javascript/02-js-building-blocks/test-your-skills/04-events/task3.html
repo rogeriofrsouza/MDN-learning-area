@@ -32,11 +32,11 @@
     <script>
       const buttonBar = document.querySelector('.button-bar');
 
+      // Add your code here
+
       function random(number) {
         return Math.floor(Math.random() * number);
       }
-
-      // Add your code here
 
       const section = document.querySelector('.preview');
       const para = document.createElement('p');
@@ -47,7 +47,6 @@
           color = `rgb(${random(256)}, ${random(256)}, ${random(256)})`;
         }
         buttonBar.style.backgroundColor = color;
-
         para.textContent = `You chose ${color}.`;
         section.appendChild(para);
       });
