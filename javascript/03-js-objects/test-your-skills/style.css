@@ -1,0 +1,34 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fff;
+  color: #333;
+  font: 1em / 1.4 Helvetica Neue, Helvetica, Arial, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+h2 {
+  font-size: 1.6rem;
+  margin: 0;
+}
+
+p {
+  color: rebeccapurple;
+  margin: 0.5em 0;
+}
+
+.preview {
+  width: 90%;
+  max-width: 600px;
+  padding: 0.5em 1em;
+  border: 1px solid #333;
+}
+

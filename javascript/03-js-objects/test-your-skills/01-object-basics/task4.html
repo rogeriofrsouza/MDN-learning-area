@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Object basics: Task 4</title>
+    <style>
+      div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 2em;
+        padding: 1em;
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+      }
+
+      blockquote {
+        margin: 0;
+        padding-left: 1em;
+        border-left: 4px solid #999;
+      }
+    </style>
+    <link rel="stylesheet" href="../style.css"/>
+  </head>
+
+  <body>
+    <section class="preview"></section>
+
+    <script>
+      const section = document.querySelector('.preview');
+      const div1 = document.createElement('div');
+      const div2 = document.createElement('div');
+      const para1 = document.createElement('p');
+      const para2 = document.createElement('p');
+      const quote1 = document.createElement('blockquote');
+      const quote2 = document.createElement('blockquote');
+
+      // Constructor
+
+      function Cat(name, breed, color) {
+        this.name = name;
+        this.breed = breed;
+        this.color = color;
+        this.greeting = () => `Hello, said ${this.name} the ${this.color} ${this.breed}.`;
+      }
+
+      const cat1 = new Cat('Bertie', 'Cymric', 'golden');
+      const cat2 = new Cat('Alexa', 'Maine coon', 'grey');
+      
+      para1.textContent = cat1.greeting();
+      para2.textContent = cat2.greeting();
+
+      div1.innerHTML = `
+        <a 
+          title="Desaix83, d&#039;après le travail d&#039;Heikki Siltala, CC BY 3.0 &lt;https://creativecommons.org/licenses/by/3.0&gt;, via Wikimedia Commons" 
+          href="https://commons.wikimedia.org/wiki/File:Cymric_Fond_Blanc.jpg"
+          target="_blank"
+        >
+          <img width="512" alt="Cymric Fond Blanc" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Cymric_Fond_Blanc.jpg/512px-Cymric_Fond_Blanc.jpg"> 
+        </a>`;
+
+      div2.innerHTML = `
+        <a 
+          title="Dominique Jacholke, CC BY-SA 3.0 &lt;https://creativecommons.org/licenses/by-sa/3.0&gt;, via Wikimedia Commons" 
+          href="https://commons.wikimedia.org/wiki/File:Maine_Coon_Fallen_Angel_of_Canadian_Summer_07.jpg"
+          target="_blank"
+        >
+          <img width="512" alt="Maine Coon Fallen Angel of Canadian Summer 07" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Maine_Coon_Fallen_Angel_of_Canadian_Summer_07.jpg/512px-Maine_Coon_Fallen_Angel_of_Canadian_Summer_07.jpg">
+        </a>`;
+     
+      quote1.innerHTML = `
+        <a 
+          href="https://commons.wikimedia.org/wiki/File:Cymric_Fond_Blanc.jpg" 
+          target="_blank"
+        >
+          Desaix83, d&#039;après le travail d&#039;Heikki Siltala
+        </a>, 
+        <a href="https://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>, via Wikimedia Commons`;
+      
+      quote2.innerHTML = `
+        <a 
+          href="https://commons.wikimedia.org/wiki/File:Maine_Coon_Fallen_Angel_of_Canadian_Summer_07.jpg" 
+          target="_blank"
+        >
+          Dominique Jacholke
+        </a>, 
+        <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a>, via Wikimedia Commons`;
+
+      div1.appendChild(para1);
+      div2.appendChild(para2);
+      section.appendChild(div1);
+      section.appendChild(div2);
+      section.appendChild(quote1);
+      section.appendChild(quote2);
+    </script>
+  </body>
+</html>

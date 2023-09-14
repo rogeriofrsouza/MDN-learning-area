@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Object basics: Task 2</title>
+    <style>
+      blockquote {
+        margin: 0;
+        padding-left: 1em;
+        border-left: 4px solid #999;
+      }
+    </style>
+    <link rel="stylesheet" href="../style.css"/>
+  </head>
+
+  <body>
+    <section class="preview"></section>
+    
+    <script>
+      let bandInfo;
+
+      // Add your code here
+
+      const band = {
+        name: 'London Symphony Orchestra',
+        nationality: 'England',
+        genre: `Their style is remarkable, ranging the great masterpieces 
+          written by the masters of music, including: 
+          Beethoven, Haydn, Strauss, Stravinsky and more`,
+        members: 50,
+        formed: 1904,
+        split: false,
+        url: 'https://www.lso.co.uk/',
+        albums: [
+          {
+            name: 'Shostakovich: Symphonies Nos 6 & 15', 
+            released: 2023
+          }, 
+          {
+            name: 'Strauss: Also sprach Zarathustra – Debussy: Jeux', 
+            released: 2023
+          },
+          {
+            name: 'Beethoven: Violin Concerto', 
+            released: 2023
+          },
+          {
+            name: 'Prokofiev: Symphony No. 1',
+            released: 2023
+          }]
+      };
+
+      const year = new Date(Date.now()).getFullYear();
+
+      bandInfo = `The ${band.name} was established in ${band.formed} as one of the 
+        first orchestras shaped by its musicians. Since then, generations 
+        of remarkable talents have built the LSO’s reputation for uncompromising 
+        quality and inspirational repertoires.
+        The orchestra was founded at the wonderful ${band.nationality} and is 
+        currently ${year - band.formed} years active. ${band.genre}.
+        LSO has released over 100 recordings conducted by many of the world’s 
+        greatest artists, here are some of these: `;
+
+      const list = document.createElement('ul');
+      
+      for (const album of band.albums) {
+        const listItem = document.createElement('li');
+        listItem.textContent = `${album.name} (${album.released})`;
+        list.appendChild(listItem);
+      }
+
+      const quote = document.createElement('blockquote');
+      const anchor = document.createElement('a');
+
+      quote.textContent = 'You can find ';
+      anchor.textContent = `more about ${band.name} here.`;
+      anchor.setAttribute('href', band.url);
+      anchor.setAttribute('target', '_blank');
+      quote.appendChild(anchor);
+
+      // Don't edit the code below here!
+
+      const section = document.querySelector('section');
+      let para = document.createElement('p');
+      para.textContent = bandInfo;
+      section.appendChild(para);
+      section.appendChild(list);
+      section.appendChild(quote);
+    </script>
+  </body>
+</html>
