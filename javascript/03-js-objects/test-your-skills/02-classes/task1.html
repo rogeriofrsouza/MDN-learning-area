@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>OOJS: Task 1</title>
+    <link rel="stylesheet" href="../style.css"/>
+  </head>
+
+  <body>
+    <section class="preview"></section>
+
+    <script>
+      const section = document.querySelector('.preview');
+      const para1 = document.createElement('p');
+      const para2 = document.createElement('p');
+
+      class Shape {
+        #name;
+        #sides;
+        #sideLength;
+        
+        constructor(name, sides, sideLength) {
+          this.#name = name;
+          this.#sides = sides;
+          this.#sideLength = sideLength;
+        }
+
+        calcPerimeter() {
+          return this.#sides * this.#sideLength;
+        }
+      }
+      
+      const square = new Shape('square', 4, 5);
+      para1.textContent = `Square perimeter is ${square.calcPerimeter()}`;
+
+      const triangle = new Shape('triangle', 3, 3);
+      para2.textContent = `Triangle perimeter is ${triangle.calcPerimeter()}`;
+
+      section.appendChild(para1);
+      section.appendChild(para2);
+    </script>
+  </body>
+</html>

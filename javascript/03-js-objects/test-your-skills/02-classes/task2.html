@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>OOJS: Task 2</title>
+    <link rel="stylesheet" href="../style.css"/>
+  </head>
+
+  <body>
+    <section class="preview"></section>
+
+    <script>
+      const section = document.querySelector('.preview');
+      const para1 = document.createElement('p');
+      const para2 = document.createElement('p');
+      const para3 = document.createElement('p');
+
+      class Shape {
+        #name;
+        #sides;
+        #sideLength;
+
+        constructor(name, sides, sideLength) {
+          this.#name = name;
+          this.#sides = sides;
+          this.#sideLength = sideLength;
+        }
+
+        getSideLength() {
+          return this.#sideLength;
+        }
+
+        calcPerimeter() {
+          return this.#sides * this.#sideLength;
+        }
+
+        calcArea() {
+        }
+
+        toString() {
+          return `The ${this.#name} perimeter is ${this.calcPerimeter()} and area is ${this.calcArea()}`;
+        }
+      }
+
+      class Square extends Shape {
+        constructor(sideLength) {
+          super('square', 4, sideLength);
+        }
+        
+        calcArea() {
+          return this.getSideLength() ** 2;
+        }
+      }
+
+      class Triangle extends Shape {
+        constructor(sideLength) {
+          super('triangle', 3, sideLength);
+        }
+
+        calcArea() {
+          // Equilateral triangle area
+          return (Math.sqrt(3) / 4) * this.getSideLength() ** 2;
+        }
+      }
+
+      class Rectangle extends Shape {
+        constructor(...sideLength) {
+          super('rectangle', 4, sideLength);
+        }
+
+        calcPerimeter() {
+          const sides = this.getSideLength();
+          return (sides[0] + sides[1]) * 2;
+        }
+
+        calcArea() {
+          const sides = this.getSideLength();
+          return sides[0] * sides[1];
+        }
+      }
+      
+      const square = new Square(6);
+      const triangle = new Triangle(10); // Equilateral triangle
+      const rectangle = new Rectangle(5, 8);
+      
+      para1.textContent = square.toString();
+      para2.textContent = triangle.toString();
+      para3.textContent = rectangle.toString();
+
+      section.appendChild(para1);
+      section.appendChild(para2);
+      section.appendChild(para3);
+    </script>
+  </body>
+</html>
